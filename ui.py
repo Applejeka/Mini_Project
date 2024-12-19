@@ -1,7 +1,7 @@
 import customtkinter as ctk
-from logic import add_data
-from logic import delete_data
-from logic import fetch_users
+from password_manager import add_data
+from password_manager import delete_data
+from password_manager import fetch_users
 from database import connect_db
 
 def on_submit(entry_username, entry_password, connect_db):
@@ -27,9 +27,7 @@ def create_main_window():
     frame = ctk.CTkFrame(root)
     frame.grid(row=1,column=0,padx=1, pady=1, sticky="ew")
     create_header(frame)
-    # create_left_side(root)
     user_list(frame)
-    # create_right_side(root)
     root.mainloop()
 
 #Header/Add-Delete_login
